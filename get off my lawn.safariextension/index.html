@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Global Page</title>
+<script>
+
+  var blackList =
+        { gplusone: [ 'apis.google.com/js/plusone.js' ]
+        , gbuzz: [ 'www.google.com/buzz/' ]
+        , fb:
+            [ 'www.facebook.com/plugins/'
+            , 'www.facebook.com/widgets/'
+            , 'static.ak.fbcdn.net/connect.php'
+            , 'connect.facebook.net/'
+            , 'www.facebook.com/miniprofile.php'
+            ]
+        , twitter:
+            [ 'platform.twitter.com/widgets.js'
+            , 'widgets.twimg.com'
+            , 'twitter.com/javascripts/blogger.js'
+            , 'twitter.com/statuses/user_timeline/'
+            , 'twitter.com/share'
+            ]
+        , linkedin: [ 'platform.linkedin.com/' ]
+        , addthis:
+            [ 's7.addthis.com/'
+            , 'api-public.addthis.com/'
+            ]
+        , stumble: [ 'www.stumbleupon.com/badge/' ]
+        , vkontakte:
+            [ 'vkontakte.ru/js/api/'
+            , 'vkontakte.ru/share'
+            ]
+        }
+
+  
+  function blockContent ( event ) {
+    var name
+      , url = event.message
+
+    event.message = false
+
+    if ( event.name === 'canLoad' ) {
+      for ( name in blackList )
+        if ( blackList[ name ].some( isBadUrl ) ) {
+          event.message = true
+          break
+        }
+      return event.message
+    }
+    
+    function isBadUrl ( badUrl ) {
+      return makeRegexp( badUrl ).test( url )
+    }
+  }
+
+  function makeRegexp ( str ) {
+    return new RegExp( str.replace( /[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&" ) )
+  }
+ 
+  safari.application.addEventListener( 'message', blockContent, true )
+
+</script>
