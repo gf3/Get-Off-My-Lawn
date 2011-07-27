@@ -41,10 +41,11 @@
 
     if ( event.name === 'canLoad' ) {
       for ( name in blackList )
-        if ( blackList[ name ].some( isBadUrl ) ) {
-          event.message = true
-          break
-        }
+        if ( safari.extension.settings[ name ] )
+          if ( blackList[ name ].some( isBadUrl ) ) {
+            event.message = true
+            break
+          }
       return event.message
     }
     
