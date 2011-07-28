@@ -1,4 +1,4 @@
-function shouldLoad () {
+function shouldLoad ( event ) {
   var resp = safari.self.tab.canLoad( event, event.url )
   if ( resp )
     event.preventDefault()

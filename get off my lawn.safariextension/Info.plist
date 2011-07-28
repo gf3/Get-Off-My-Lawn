@@ -45,5 +45,7 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>https://raw.github.com/gf3/Get-Off-My-Lawn/master/UpdateManifest.plist</string>
 </dict>
 </plist>
