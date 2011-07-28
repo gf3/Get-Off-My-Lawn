@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>Extension Updates</key>
+   <array>
+     <dict>
+       <key>CFBundleIdentifier</key>
+       <string>com.runlevel6.safari.getoffmylawn</string>
+       <key>Developer Identifier</key>
+       <string>42MFFEKZH8</string>
+       <key>CFBundleVersion</key>
+       <string>1.0</string>
+       <key>CFBundleShortVersionString</key>
+       <string>1</string>
+       <key>URL</key>
+       <string></string>
+     </dict>
+   </array>
+</dict>
+</plist>
