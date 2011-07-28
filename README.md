@@ -16,3 +16,6 @@ Verbatim from his extension:
 
 [Download it immediately!](https://github.com/downloads/gf3/Get-Off-My-Lawn/get%20off%20my%20lawn.safariextz)
 
+## Preview
+
+![Preview](https://github.com/gf3/Get-Off-My-Lawn/raw/master/preview.png)
